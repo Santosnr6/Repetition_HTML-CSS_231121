@@ -17,5 +17,48 @@
 }
 
 /* Menu */
+nav {
+    background-color: rgb(203, 203, 146);
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.menu-item {
+    list-style-type: none;
+    padding: 1.5rem 2.5rem;
+    width: 140px;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+}
+
+.menu-item:hover {
+    background-color: rgb(116,116,79);
+}
+
+.dropdown {
+    position: absolute;
+    opacity: 0;
+    transform: translateY(-.7rem);
+    transition: all .7s ease-in-out;
+    left: 0;
+    top: 4.1rem;
+    background-color: rgb(203, 203, 146);
+}
+
+.dropdown-parent:hover .dropdown {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
 
 

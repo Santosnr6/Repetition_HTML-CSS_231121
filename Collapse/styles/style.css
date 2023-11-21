@@ -10,3 +10,59 @@ body {
     background-color: beige;
 }
 
+.collapse {
+    width: 700px;
+    margin: 3rem auto;
+}
+
+.collapse li {
+    list-style-type: none;
+    width: 100%;
+    margin: 1.2rem;
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    background-color: beige;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.2),
+                -6px -6px 10px -1px rgba(255,255,255, 0.7);
+}
+
+.collapse li label {
+    display: flex;
+    align-items: center;
+    padding: 0.7rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.collapse li label::before {
+    content: '+';
+    margin-right: 0.7rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+.content {
+    color: #555;
+    padding: 0 0.6rem;
+    transition: all 0.2s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+}
+
+input[type=checkbox]:checked ~.content {
+    max-height: 100%;
+    padding:  0.7rem 0.7rem 1.2rem;
+}
+
+input[type=checkbox]:checked ~ label::before {
+    content: '-';
+}
+
+
+
+
+
